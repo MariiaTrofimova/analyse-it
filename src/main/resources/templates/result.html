@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Analyse It</title>
+    <link th:href="@{/styles/style.css}" rel="stylesheet"/>
+    <link th:href="@{/img/icon.png}" rel="shortcut icon"/>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1><a href="/">Analyse It</a></h1>
+<h2>Analyse Your Text</h2>
+
+<div class="result">
+    <p><label>Your Text:</label><br /><span th:text="${yourText}"></span></p>
+</div>
+<hr style="width: 20% ; border: none; border-top: 12px solid black"/>
+<div>
+    <h3>Text Statistics</h3>
+    <div class="result">
+        <p><strong>Characters Frequency: </strong></p>
+        <p><span th:text="${charFreq}"></span></p>
+        <p><strong>Characters: </strong><span th:text="${charsQty}"></span></p>
+        <p><strong>Non-space Characters: </strong><span th:text="${nCharsQty}"></span></p>
+        <p><strong>Words: </strong><span th:text="${wordsQty}"></span></p>
+    </div>
+
+    <form action="/" method="GET" id="main">
+        <button>Analyse Another Text</button>
+    </form>
+</div>
+<!-- partial -->
+
+</body>
+
+<div class="footer">
+    <span><a href="https://github.com/MariiaTrofimova" target="_blank">  github  </a></span>
+    <span><a href="https://www.linkedin.com/in/mariiatrofimova/" target="_blank">  linkedin  </a></span>
+    <span><a href="https://t.me/kapandaw" target="_blank">  telegram  </a></span>
+</div>
+</html>
